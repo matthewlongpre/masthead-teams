@@ -1,0 +1,956 @@
+{
+    "versionId": "9d55d285-a07d-4f15-b430-b0c552326a07",
+    "versionNumber": 65,
+    "versionAuthor": "Karin Skapski",
+    "versionDate": "2018-12-03T18:56:40.9586531+00:00",
+    "versionComment": "Rolled back to previous version",
+    "publishedVersion": true,
+    "theme": {
+      "backgroundColour": "#434244",
+      "foregroundColour": "#ffffff",
+      "logo": "5a01fdcb-e585-427e-8423-24a85a54ae50-itg15-white-orange.png",
+      "bannerType": 0,
+      "displayFooter": false,
+      "displayRightMenu": true,
+      "displayLeftMenu": true,
+      "whiteBg": false
+    },
+    "footer": {
+      "footerText": "",
+      "footerLinks": [
+        {
+          "behaviour": 1,
+          "title": "Footers are for suckas!",
+          "url": "http://www.itgroove.net",
+          "_id": "373562f2-595e-07d5-1767-0baca8afa1e2"
+        }
+      ]
+    },
+    "menu": [
+      {
+        "_id": "e74c7228-32a0-4cb9-52b2-7b0a71ffb1fc",
+        "behaviour": 0,
+        "icon": "home",
+        "menu": [
+          {
+            "_id": "e37d0ff1-4d0c-dc1d-0e54-bd06768d71ed",
+            "behaviour": 0,
+            "icon": "beenhere",
+            "menu": [
+              {
+                "_id": "ea93f501-ed60-910f-5327-938144ab22be",
+                "behaviour": 0,
+                "icon": "live_help",
+                "menu": {},
+                "title": "Who",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/fivews.aspx?itgtab=1",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "c3c4351f-8fbb-958f-89c2-8af769652438",
+                "behaviour": 0,
+                "icon": "live_help",
+                "menu": {},
+                "title": "What",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/fivews.aspx?itgtab=2",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "074c3e1d-b8a8-712f-415e-3b4e511b5b02",
+                "behaviour": 0,
+                "icon": "live_help",
+                "menu": {},
+                "title": "Where",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/fivews.aspx?itgtab=3",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "fcd425d7-a67e-bbb9-4870-da20ba9aa1d3",
+                "behaviour": 0,
+                "icon": "live_help",
+                "menu": {},
+                "title": "When",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/fivews.aspx?itgtab=5",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "2fe0d38a-a978-f8ee-d826-94d315c1dac7",
+                "behaviour": 0,
+                "icon": "live_help",
+                "menu": {},
+                "title": "Why",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/fivews.aspx?itgtab=4",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "23ab04cf-9188-0131-45cb-398c6d667e92",
+                "behaviour": 0,
+                "icon": "live_help",
+                "menu": {},
+                "title": "How",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/fivews.aspx?itgtab=6",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "The 5 W's",
+            "type": 1,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "54e68a5b-7f5e-ebfb-1750-0cb9fa462858",
+            "behaviour": 0,
+            "icon": "play_arrow",
+            "menu": [
+              {
+                "_id": "184e305f-cfa5-b4ff-2450-8299b0de1ed1",
+                "behaviour": 0,
+                "icon": "person",
+                "menu": [
+                  {
+                    "_id": "4fad290b-f9f7-067d-b8ea-dbaad66d0a6a",
+                    "behaviour": 0,
+                    "icon": "person",
+                    "menu": {},
+                    "title": "Meet the Team",
+                    "type": 0,
+                    "url": "https://itgrooveservices.sharepoint.com/sites/itgrooveHR",
+                    "trimToGroups": {}
+                  },
+                  {
+                    "_id": "deda83d7-ba0f-9675-bc53-e65d6225eddf",
+                    "behaviour": 0,
+                    "icon": "directions_car",
+                    "menu": {},
+                    "title": "Submit Mileage",
+                    "type": 1,
+                    "url": "https://itgrooveservices.sharepoint.com/teams/corporate/Lists/MileageTracking",
+                    "trimToGroups": {}
+                  },
+                  {
+                    "_id": "f5079eb0-0e41-304f-4e9f-5813d224c765",
+                    "behaviour": 1,
+                    "icon": "beach_access",
+                    "menu": {},
+                    "title": "Absence Tracker",
+                    "type": 1,
+                    "url": "https://web.powerapps.com/apps/1c7d0d8e-67fc-496c-a0c0-a1aa86013718",
+                    "trimToGroups": {}
+                  }
+                ],
+                "title": "Human Resources",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/sites/itgrooveHR",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "50860260-d2aa-fe9f-3d36-bfa238c56be0",
+                "behaviour": 0,
+                "icon": "monetization_on",
+                "menu": [
+                  {
+                    "_id": "41d2a80a-5261-1e4d-1925-17ac419a89c2",
+                    "behaviour": 0,
+                    "icon": "",
+                    "menu": {},
+                    "title": "Meet the Team",
+                    "type": 0,
+                    "url": "https://itgrooveservices.sharepoint.com/finance",
+                    "trimToGroups": {}
+                  }
+                ],
+                "title": "Finance",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/finance",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "af62de32-b964-f3c4-7bcb-3765c4dede32",
+                "behaviour": 0,
+                "icon": "computer",
+                "menu": [
+                  {
+                    "_id": "7b69da4d-7c5a-cc0f-1eb0-52d760565bad",
+                    "behaviour": 0,
+                    "icon": "",
+                    "menu": {},
+                    "title": "Meet the Team",
+                    "type": 0,
+                    "url": "https://go.itgroove.ca/sites/intranet/pages/it.aspx",
+                    "trimToGroups": {}
+                  }
+                ],
+                "title": "Technology Services",
+                "type": 1,
+                "url": "https://go.itgroove.ca/sites/intranet/pages/it.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "e545dca7-5abd-e954-400a-59ac1f434ef4",
+                "behaviour": 0,
+                "icon": "settings_voice",
+                "menu": [
+                  {
+                    "_id": "990592c5-6776-15d8-b0e3-18bf575f2d8f",
+                    "behaviour": 0,
+                    "icon": "",
+                    "menu": {},
+                    "title": "Meet the Team",
+                    "type": 0,
+                    "url": "https://go.itgroove.ca/sites/intranet/pages/sales.aspx",
+                    "trimToGroups": {}
+                  }
+                ],
+                "title": "Marketing & Social",
+                "type": 1,
+                "url": "https://go.itgroove.ca/sites/intranet/pages/sales.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "7a49a4bd-89bd-6478-107e-66ee1d51c823",
+                "behaviour": 0,
+                "icon": "network_wifi",
+                "menu": [
+                  {
+                    "_id": "e6a071fd-2106-9134-d4d2-24a02eef8e3a",
+                    "behaviour": 0,
+                    "icon": "",
+                    "menu": {},
+                    "title": "Meet the Team",
+                    "type": 0,
+                    "url": "https://go.itgroove.ca/sites/intranet/pages/sales.aspx",
+                    "trimToGroups": {}
+                  }
+                ],
+                "title": "Business Development",
+                "type": 1,
+                "url": "https://go.itgroove.ca/sites/intranet/pages/sales.aspx",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Departments",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "4be2d338-6d8f-e027-37b7-9c07cfb66702",
+            "behaviour": 0,
+            "icon": "widgets",
+            "menu": [
+              {
+                "_id": "7d8fbc87-5b36-be5d-a6e0-78934894653c",
+                "behaviour": 0,
+                "icon": "lock",
+                "menu": {},
+                "title": "itgroove | Green Eggs",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/Lists/itgrooveGEH",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "ab73f145-d6ec-aa2a-9061-1412af13601f",
+                "behaviour": 0,
+                "icon": "folder_open",
+                "menu": {},
+                "title": "Corporate Documents",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/CorporateDocuments",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "e577a186-cf96-7ba3-9fd3-704b80b8080b",
+                "behaviour": 0,
+                "icon": "archive",
+                "menu": {},
+                "title": "Templates",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/templates",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "6b71c248-4921-49e8-5a06-4306993e7e69",
+                "behaviour": 0,
+                "icon": "date_range",
+                "menu": {},
+                "title": "Corporate Calendar",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/sites/Dashboards/SitePages/itgroove-Calendars.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "3eac7252-98f1-e906-23ce-f86aea2ce3bb",
+                "behaviour": 0,
+                "icon": "date_range",
+                "menu": {},
+                "title": "SOFMC Suite Calendar",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/Lists/SOFMCSuiteCalendar/GameCalendar.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "1626dfa2-bd77-19e0-ebae-cff45653d2d6",
+                "behaviour": 0,
+                "icon": "contact_mail",
+                "menu": {},
+                "title": "Shared Contacts",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/clients/Lists/Contacts",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "fba17789-b562-0493-abf2-6376c01e8629",
+                "behaviour": 0,
+                "icon": "group",
+                "menu": {},
+                "title": "Staff Directory - Delve",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/Dashboards/SitePages/Staff-Directory.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "8b44f13a-9e0d-78a6-ac18-d21174de58d9",
+                "behaviour": 0,
+                "icon": "group_add",
+                "menu": {},
+                "title": "Staff Directory - Official",
+                "type": 0,
+                "url": "https://billing.itgroove.ca/consultants/view",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "16d497aa-96f5-db39-841e-838c365084d3",
+                "behaviour": 0,
+                "icon": "account_balance",
+                "menu": {},
+                "title": "Corporate Info & Policies",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/CorporateWIKI",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "1b6f4f64-9ac4-7eae-e478-271814734341",
+                "behaviour": 0,
+                "icon": "thumb_up",
+                "menu": {},
+                "title": "Partner & Vendor Wiki",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/partners",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "2fd933e6-9b07-dee6-6a99-0ace9302d0c8",
+                "behaviour": 0,
+                "icon": "videocam",
+                "menu": {},
+                "title": "Video Security",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/pages/video-security.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "6fca0f72-7d98-8328-edb3-026cbea8d69f",
+                "behaviour": 0,
+                "icon": "restaurant_menu",
+                "menu": {},
+                "title": "Lunch & Learn",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/sitepages/lunchandlearn.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "6e767ea8-7f9c-15e1-1e29-853ec631f842",
+                "behaviour": 0,
+                "icon": "attach_money",
+                "menu": {},
+                "title": "Quick Pricing",
+                "type": 0,
+                "url": "https://go.itgroove.ca/teams/corporate/PricingWiki",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Resources",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          }
+        ],
+        "title": "Working Here",
+        "type": 0,
+        "url": "/",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "c44b4ed1-5aa0-5354-bfe0-73adf005ab63",
+        "behaviour": 0,
+        "icon": "work",
+        "menu": [
+          {
+            "_id": "e80c2576-cf59-df9d-e2d5-9da4874f1d52",
+            "behaviour": 0,
+            "icon": "dashboard",
+            "menu": [
+              {
+                "_id": "f2aa2ce0-ea58-f069-2aaa-952b934aa9c4",
+                "behaviour": 0,
+                "icon": "fingerprint",
+                "menu": {},
+                "title": "Consultant Dashboard",
+                "type": 1,
+                "url": "https://billing.itgroove.ca/dashboard",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "9ab68e5e-14e5-614a-281e-5fea4ec05db0",
+                "behaviour": 0,
+                "icon": "schedule",
+                "menu": {},
+                "title": "Task Scheduler",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/sites/clients/Lists/TaskScheduler/CalendarView.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "3fae5947-68e7-42fe-e7ef-59f10ffbff3a",
+                "behaviour": 0,
+                "icon": "alarm",
+                "menu": {},
+                "title": "Expiry Tracker",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/sites/clients/Lists/ExpiryTracker",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "3158d336-8c0b-40ee-5f37-041be79991a3",
+                "behaviour": 0,
+                "icon": "build",
+                "menu": {},
+                "title": "Change Register",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/sites/clients/Lists/ChangeRegister/AllItems.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "5b9b6acf-e384-2260-2f95-1f797d17efc0",
+                "behaviour": 0,
+                "icon": "insert_chart",
+                "menu": {},
+                "title": "Client Insights",
+                "type": 1,
+                "url": "https://billing.itgroove.ca/reporting",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Dashboards",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "916f37ce-2d74-cb43-7209-e77ffec9bfa0",
+            "behaviour": 0,
+            "icon": "folder_special",
+            "menu": [
+              {
+                "_id": "5c731768-89d3-0550-1595-bd61d7c0d724",
+                "behaviour": 0,
+                "icon": "archive",
+                "menu": {},
+                "title": "Templates",
+                "type": 1,
+                "url": "https://itgrooveservices.sharepoint.com/teams/corporate/templates",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "4124905c-b218-3779-39c1-7aa6667c1ae6",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "SOWs & Contracts",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/agreements/SitePages/LatestAgreements.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "a8b46365-1960-98b5-8a90-1750547101cb",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Client Documentation",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/clients/ClientDocuments",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Document Centre",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "d9cb3558-e7bd-18a7-223c-5d60a660c23c",
+            "behaviour": 0,
+            "icon": "security",
+            "menu": [
+              {
+                "_id": "bc9180be-fd22-24ac-30d2-9d63555e8b7c",
+                "behaviour": 0,
+                "icon": "security",
+                "menu": {},
+                "title": "About itGuardian",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/Pages/About-Monitoring.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "d0e93e77-6f37-cde8-e824-937ebd9dcae0",
+                "behaviour": 0,
+                "icon": "insert_link",
+                "menu": {},
+                "title": "itGuardian Links & Resources",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/Pages/About-itGuardian.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "375375f8-48cb-f24f-6e63-06f56fdaa268",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Triage Management",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/clients/Lists/Triage/AllItems.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "dfb60100-aa1c-416f-af14-7f33d70f95c9",
+                "behaviour": 0,
+                "icon": "cloud_upload",
+                "menu": {},
+                "title": "Monitoring Inside Out",
+                "type": 1,
+                "url": "https://itgroovehealth.com/",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "4b784cdf-3cd0-c4ee-3e1a-e31909833ae8",
+                "behaviour": 0,
+                "icon": "cloud_download",
+                "menu": {},
+                "title": "Monitoring Outside In",
+                "type": 1,
+                "url": "http://itgroove.net/statuscake",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "itGuardian",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "ea0a3700-9acb-9597-95f4-08a2a5d782fd",
+            "behaviour": 0,
+            "icon": "lock",
+            "menu": {},
+            "title": "Client Green Eggs",
+            "type": 1,
+            "url": "https://itgrooveservices.sharepoint.com/sites/shh/Lists/ClientGreenEggs/GEH.aspx",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "1c1ea921-cfe6-931c-5374-f64d02b131c9",
+            "behaviour": 0,
+            "icon": "important_devices",
+            "menu": {},
+            "title": "Screen Connect",
+            "type": 1,
+            "url": "https://itgroovesupport.com/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "3f68d0b9-68b9-bec1-c51f-f519e22b6935",
+            "behaviour": 0,
+            "icon": "settings_remote",
+            "menu": {},
+            "title": "Remote Access",
+            "type": 1,
+            "url": "https://itgrooveservices.sharepoint.com/sites/shh/Lists/ClientRemoteAccess",
+            "trimToGroups": {}
+          }
+        ],
+        "title": "Client Services",
+        "type": 0,
+        "url": "/",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "c62b0f7e-eeab-3cd0-efe9-d99132fcd0d6",
+        "behaviour": 0,
+        "icon": "build",
+        "menu": [
+          {
+            "_id": "568346c8-4212-17bb-c761-1505f8f1a391",
+            "behaviour": 0,
+            "icon": "cloud_queue",
+            "menu": {},
+            "title": "Cloud Services",
+            "type": 1,
+            "url": "https://itgrooveservices.sharepoint.com/sites/cloud",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "16ec6a31-6e9a-9b57-d9a3-9f18a9c6bf5e",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Extranet Sites",
+            "type": 0,
+            "url": "Extranet Sites",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "b6027ffd-a387-98f6-1528-7079695bf2ec",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Design Portfolio",
+            "type": 0,
+            "url": "https://go.itgroove.ca/sites/intranet/pages/portfolio.aspx",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "3a4e0ca6-0d9f-023f-1cae-f81fe9680e18",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Events",
+            "type": 0,
+            "url": "https://itgrooveservices.sharepoint.com/sites/events",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "b3cf45a9-9631-0b48-28c7-110fc154bc19",
+            "behaviour": 0,
+            "icon": "",
+            "menu": [
+              {
+                "_id": "1cce12f3-7da7-fb73-ec6f-08d6cb67f5fa",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Video",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&p=h",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "43d0f7f1-cecc-9f37-14d6-72b3d93eead6",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Best Practices",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/bestpractices",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "6537eb75-bdb0-2f9c-ca91-9b2b7660d614",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Project Registry",
+                "type": 0,
+                "url": "https://itgrooveservices.sharepoint.com/sites/projectcentral",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "0b5a0652-1ebf-57cc-3f79-c08d87fa17dc",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "itGroogle",
+                "type": 0,
+                "url": "https://go.itgroove.ca/search",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "ec6fc166-a7ff-5ab6-63cc-6437ed9ce2a8",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Legacy BI Site",
+                "type": 0,
+                "url": "https://go.itgroove.ca/sites/bi",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Legacy Stuff",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          }
+        ],
+        "title": "Projects & Sites",
+        "type": 0,
+        "url": "/",
+        "trimToGroups": {}
+      }
+    ],
+    "rightMenu": [
+      {
+        "_id": "c5825074-07e5-92e9-d805-74164440b2be",
+        "behaviour": 0,
+        "icon": "home",
+        "menu": [
+          {
+            "_id": "332229be-8651-ba31-8f9c-95f9246bfd2d",
+            "behaviour": 0,
+            "icon": "home",
+            "menu": {},
+            "title": "Home",
+            "type": 1,
+            "url": "https://itgrooveservices.sharepoint.com",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "3e7911fb-008e-613a-532d-48bfe1b1ab95",
+            "behaviour": 1,
+            "icon": "",
+            "menu": {},
+            "title": "Old GO Home",
+            "type": 0,
+            "url": "https://itgrooveservices.sharepoint.com/pages/home-search.aspx",
+            "trimToGroups": {}
+          }
+        ],
+        "title": "Home",
+        "type": 2,
+        "url": "https://itgrooveservices.sharepoint.com",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "4538afaf-eb12-f317-90cc-e6efd8f48826",
+        "behaviour": 0,
+        "icon": "search",
+        "menu": [
+          {
+            "_id": "64c1d14b-2a3d-d65e-7256-c3621c00ae2d",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Cloud Search",
+            "type": 0,
+            "url": "https://itgrooveservices.sharepoint.com/search",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "eb03bb5d-94da-2af5-7055-41f386c68701",
+            "behaviour": 1,
+            "icon": "",
+            "menu": {},
+            "title": "Delve",
+            "type": 0,
+            "url": "https://can.delve.office.com/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "b44852d7-4ed4-876d-0bb9-f2b9f2dc9c4d",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Old On-Prem Search",
+            "type": 0,
+            "url": "https://go.itgroove.ca/search",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "97486a5a-187b-c4dd-fb16-2cc40650a6bb",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Portal Orientation",
+            "type": 0,
+            "url": "https://go.itgroove.ca/dashboards/Orientation.aspx",
+            "trimToGroups": {}
+          }
+        ],
+        "title": "Search",
+        "type": 2,
+        "url": "/",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "c9800a86-c4e1-2054-1957-97851c3990e5",
+        "behaviour": 0,
+        "icon": "event_note",
+        "menu": {},
+        "title": "Calendars",
+        "type": 2,
+        "url": "https://itgrooveservices.sharepoint.com/sites/Dashboards/SitePages/itgroove-Calendars.aspx",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "f384cfcd-4979-18b0-70b2-03400da560e9",
+        "behaviour": 0,
+        "icon": "stars",
+        "menu": {},
+        "title": "itgroove Core System",
+        "type": 2,
+        "url": "https://billing.itgroove.ca/",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "d02255df-1fb5-8a4a-b909-82ee224962e3",
+        "behaviour": 0,
+        "icon": "call",
+        "menu": {},
+        "title": "Pre-Sales Form",
+        "type": 2,
+        "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=W8D6SYo27EOR7AnGtcagZmzAQEUbbyVJs2B7kgPx_XhUNjZINjE2WVRSSVdIOE9ZTUozUjFMN1c0NC4u",
+        "trimToGroups": {}
+      },
+      {
+        "_id": "47e87ce9-2636-368c-6ec9-0a98f77d6014",
+        "behaviour": 0,
+        "icon": "all_inclusive",
+        "menu": [
+          {
+            "_id": "a873c2c3-fc9c-fb72-446a-410533bed9d6",
+            "behaviour": 0,
+            "icon": "add_box",
+            "menu": [
+              {
+                "_id": "7e7baadc-0a2c-2884-6706-4ededc62a7d8",
+                "behaviour": 0,
+                "icon": "add_circle",
+                "menu": {},
+                "title": "Create an Issue",
+                "type": 1,
+                "url": "https://billing.itgroove.ca/issues/edit/0",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "b8f9f3a0-cade-9192-40db-db447b29cb1b",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "My Active Issues",
+                "type": 0,
+                "url": "https://billing.itgroove.ca/issues/view",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "040c8941-b081-cde6-275c-45c522a77a4e",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Support Receiver",
+                "type": 0,
+                "url": "https://billing.itgroove.ca/issues/supportreceiver",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Issues",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "07949070-2f39-f2b6-23aa-3c1d18f8004a",
+            "behaviour": 0,
+            "icon": "",
+            "menu": [
+              {
+                "_id": "fc7c9d23-b017-c47a-0147-829f82dcbf02",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Internal Blogs",
+                "type": 0,
+                "url": "https://go.itgroove.ca/blogs/default.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "a10268da-f965-f08d-7e64-ea0f12f25157",
+                "behaviour": 0,
+                "icon": "",
+                "menu": {},
+                "title": "Client Blogs",
+                "type": 0,
+                "url": "https://go.itgroove.ca/clientmanager/clientblogs/default.aspx",
+                "trimToGroups": {}
+              },
+              {
+                "_id": "5463bd54-44c6-847a-6e62-a99d9085160a",
+                "behaviour": 1,
+                "icon": "",
+                "menu": {},
+                "title": "itgroove Public Blogs",
+                "type": 0,
+                "url": "http://blogs.itgroove.net/",
+                "trimToGroups": {}
+              }
+            ],
+            "title": "Blogs",
+            "type": 0,
+            "url": "/",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "5a4f4a7e-eda5-1b65-bcf5-ab9c0c5c41ef",
+            "behaviour": 0,
+            "icon": "insert_link",
+            "menu": {},
+            "title": "Link Shortener",
+            "type": 1,
+            "url": "https://itgrooveservices.sharepoint.com/sites/Dashboards/SitePages/LinkShortener.aspx",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "e03b1252-c389-446f-50bc-135685991fdc",
+            "behaviour": 0,
+            "icon": "traffic",
+            "menu": {},
+            "title": "Light Toggler",
+            "type": 1,
+            "url": "https://itgrooveservices.sharepoint.com/Pages/lighttoggle.aspx",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "a4d9bf47-ffe6-a6f0-dfac-8b6ca1d3243f",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "3rd Party Tools",
+            "type": 0,
+            "url": "https://itgrooveservices.sharepoint.com/teams/corporate/SitePages/ITG%20Tool%20List.aspx",
+            "trimToGroups": {}
+          },
+          {
+            "_id": "d4d77a6c-3d85-51d3-1ae2-b51666cb2589",
+            "behaviour": 0,
+            "icon": "",
+            "menu": {},
+            "title": "Demos",
+            "type": 0,
+            "url": "https://itgrooveservices.sharepoint.com/pages/demo.aspx",
+            "trimToGroups": {}
+          }
+        ],
+        "title": "Forms & Tools",
+        "type": 2,
+        "url": "/",
+        "trimToGroups": {}
+      }
+    ],
+  "activeSubscription": true,
+  "groups": {},
+  "groupsToTrimFor": {}
+}

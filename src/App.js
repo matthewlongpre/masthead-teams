@@ -1,28 +1,51 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import data from './mock-data';
 import logo from './logo.svg';
-import './App.css';
+import './styles.css'
+import * as microsoftTeams from "@microsoft/teams-js";
+microsoftTeams.initialize();
 
-class App extends Component {
+class MastheadContainer extends Component {
+  state = {
+    data: data
+  }
   render() {
+    const { data } = this.state;
+    const items = data.menu.map(item => <Tile key={item._id} {...item} />);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className="masthead-container">
+        <header className="masthead-header">
+          <img className="logo" src={logo} />
         </header>
+        <div className="masthead-items">
+          {items}
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+const Tile = (props) => {
+  return props.menu && props.menu.length !== 0
+    ?
+    <button className="masthead-tile">
+      <MastheadItem {...props} />
+    </button>
+    :
+    <a className="masthead-tile" href="">
+      <MastheadItem {...props} />
+    </a>
+}
+
+const MastheadItem = (props) => {
+  return (
+    <Fragment>
+      <i className="material-icons icon">{props.icon}</i>
+      <div className="title text-overflow">{props.title}</div>
+    </Fragment>
+  );
+}
+
+
+
+export default MastheadContainer;
