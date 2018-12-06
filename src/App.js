@@ -101,7 +101,14 @@ class MastheadList extends React.Component {
   }
 
   render() {
-    const items = this.props.items.map((item, index) => <Tile index={index} key={item._id} {...item} _handleClick={(index, id, event) => this._handleClick(index, id, event)} />);
+    const items = this.props.items
+      .map((item, index) => <Tile
+          index={index}
+          key={item._id}
+          {...item}
+          _handleClick={(index, id, event) => this._handleClick(index, id, event)}
+        />
+      );
 
     return (
       <div className="masthead-items">
