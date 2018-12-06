@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI Light";
+  font-family: "Segoe UI Light", arial, sans-serif;
 }
 
 html, body, #root {
@@ -59,6 +59,7 @@ body {
   margin: 10px;
   padding: 20px;
   transition: 0.3s all ease-in-out;
+  overflow: hidden;
 }
 
 .masthead-tile:hover {
@@ -75,5 +76,5 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 100%;
+  max-width: calc(100% - 10px);
 }
