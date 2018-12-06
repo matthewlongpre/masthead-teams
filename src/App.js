@@ -62,7 +62,11 @@ class MastheadContainer extends Component {
         <header className="masthead-header">
           <img className="logo" src={logo} />
         </header>
-        <MastheadList depth={0} items={menu} _changeMenuState={(index, id) => this._changeMenuState(index, id)} />
+        <MastheadList
+          depth={0}
+          items={menu}
+          _changeMenuState={(index, id) => this._changeMenuState(index, id)}
+        />
       </div>
     );
   }
