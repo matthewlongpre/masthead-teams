@@ -8,9 +8,8 @@ microsoftTeams.initialize();
 class MastheadContainer extends Component {
   state = {
     data: data,
-    // menuState: []
-    // flatMenu: new Map(),
-    // menuState: []
+    flatMenu: new Map(),
+    menuState: []
   }
 
   componentDidMount() {
@@ -35,7 +34,8 @@ class MastheadContainer extends Component {
   }
 
   _changeMenuState(index, id) {
-    let output = [... this.state.menuState].slice(0, index + 1);
+    console.log(index);
+    let output = [...this.state.menuState].slice(0, index + 1);
     if (output[index] === id) {
       output = output.slice(0, index);
     } else {
@@ -46,12 +46,6 @@ class MastheadContainer extends Component {
     });
   }
 
-  // _changeMenuState(index, id) {
-  //   this.setState({
-  //     menuState: [index, id]
-  //   });
-  // }
-
   render() {
     const { data, menuState } = this.state;
 
@@ -59,12 +53,13 @@ class MastheadContainer extends Component {
 
     return (
       <div className="masthead-container">
-        <header className="masthead-header">
+        {/* <header className="masthead-header">
           <img className="logo" src={logo} />
-        </header>
+        </header> */}
         <MastheadList
           depth={0}
           items={menu}
+          menuState={menuState}
           _changeMenuState={(index, id) => this._changeMenuState(index, id)}
         />
       </div>
@@ -76,43 +71,48 @@ class MastheadList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subitems: []
+      subItems: []
     };
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   for (let i = 0; i < nextProps.items.length; i++) {
-  //     if (nextProps.items[i]._id === nextProps.menuState[nextProps.depth]) {
-  //       this.setState({
-  //         subItems: nextProps.items[i].menu
-  //       });
-  //       return;
-  //     }
-  //   }
-  //   this.setState({
-  //     subItems: []
-  //   });
-  // }
+  componentWillReceiveProps(nextProps) {
+    for (let i = 0; i < nextProps.items.length; i++) {
+      if (nextProps.items[i]._id === nextProps.menuState[nextProps.depth]) {
+        this.setState({
+          subItems: nextProps.items[i].menu
+        });
+        return;
+      }
+    }
+    this.setState({
+      subItems: []
+    });
+  }
 
   _handleClick(index, id, event) {
-    console.log(index, id, event);
     event.nativeEvent.stopImmediatePropagation();
     this.props._changeMenuState(index, id);
   }
 
   render() {
     const items = this.props.items
-      .map((item, index) => <Tile
-          index={index}
-          key={item._id}
-          {...item}
-          _handleClick={(index, id, event) => this._handleClick(index, id, event)}
-        />
+      .map((item) => <Tile
+        depth={this.props.depth}
+        key={item._id}
+        {...item}
+        _handleClick={(index, id, event) => this._handleClick(index, id, event)}
+      />
       );
 
     return (
       <div className="masthead-items">
         {items}
+        {this.state.subItems.length !== 0 && <MastheadList
+          items={this.state.subItems}
+          depth={this.props.depth + 1}
+          menuState={this.props.menuState}
+          _changeMenuState={(index, id) => this.props._changeMenuState(index, id)}
+        />}
       </div>
     );
   }
