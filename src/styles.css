@@ -11,7 +11,7 @@ html, body, #root {
 body {
   background: #181818;
   color: #fafafa;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
 }
 
@@ -30,18 +30,6 @@ body {
   padding: 20px 0;
 }
 
-.masthead-items {
-  display: flex;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background: black;
-}
-
 .logo {
   width: 300px;
   height: 89px;
@@ -53,17 +41,49 @@ body {
   flex-direction: column;
 }
 
+.masthead-items {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* align-items: stretch; */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: black;
+}
+
+/* .masthead-items:before {
+  content: '';
+  padding-top: 100%;
+} */
+
 .masthead-tile {
+  flex: 1 0 24%;
+  /* height: calc(33.333333333vw - 20px); */
+  /* flex: 1 0 auto; */
+  max-width: calc(33.3333vw - 20px);
+  /* max-width: 50vw; */
+  height: auto;
   justify-content: center;
   color: #fafafa;
   border: 0;
-  background: green;
-  font-size: 18px;
-  margin: 10px;
+  background: #0ebfbb;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  margin: calc(5px + (10 - 5) * ((100vw - 300px) / (1600 - 300)));
   padding: 10px;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
   text-decoration: none;
+}
+
+.masthead-tile:before {
+  content: '';
+  /* float: left; */
+  padding-top: 100%;
 }
 
 .masthead-tile:hover {
@@ -75,10 +95,11 @@ body {
   flex-direction: column;
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 .icon {
-  font-size: 48px;
+  font-size: calc(24px + (64 - 24) * ((100vw - 300px) / (1600 - 300)));
   margin-bottom: 20px;
 }
 
@@ -118,6 +139,7 @@ body {
   z-index: 99;
 }
 
+/* 
 .children-1 .masthead-tile {
   width: 100vw;
   height: calc(100vw - 20px);
@@ -146,4 +168,4 @@ body {
 .children-6 .masthead-tile {
   width: 16.6666666666vw;
   height: calc(16.6666666666vw - 20px);
-}
+} */
