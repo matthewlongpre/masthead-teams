@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import * as constants from "./../shared/constants";
 import data from './../mock-data';
 import logo from './../logo.svg';
 import './../styles.css'
@@ -46,6 +48,22 @@ export default class MastheadContainer extends Component {
     });
   }
 
+  _moveBackOneMenu(event) {
+    event.nativeEvent.stopImmediatePropagation();
+    if (this.state.menuState.length > 0) {
+      this._changeMenuState(this.state.menuState.length - 1, this.state.menuState[this.state.menuState.length - 1]);
+    }
+  }
+
+  _getMenuTitle() {
+    const currentMenu = this.state.menuState[this.state.menuState.length - 1];
+    if (this.state.flatMenu.get(currentMenu)) {
+      return this.state.flatMenu.get(currentMenu).title;
+    }
+    return null;
+  }
+
+
   render() {
     const { data, menuState } = this.state;
 
@@ -53,15 +71,24 @@ export default class MastheadContainer extends Component {
 
     return (
       <div className="masthead-container">
-        <header className="masthead-header">
+        {/* <header className="masthead-header">
           <img className="logo" src={logo} />
-        </header>
-        <MastheadList
-          depth={0}
-          items={menu}
-          menuState={menuState}
-          _changeMenuState={(index, id) => this._changeMenuState(index, id)}
-        />
+        </header> */}
+        <div className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
+          {this._getMenuTitle()}
+        </div>
+        <TransitionGroup>
+          <CSSTransition
+            timeout={constants.menuTransition}
+            classNames="masthead">
+            <MastheadList
+              depth={0}
+              items={menu}
+              menuState={menuState}
+              _changeMenuState={(index, id) => this._changeMenuState(index, id)}
+            />
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     );
   }
