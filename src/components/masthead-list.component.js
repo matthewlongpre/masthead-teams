@@ -42,10 +42,12 @@ export default class MastheadList extends React.Component {
 
     return (
       <Fragment>
-        <MastheadListGroup>
-          {items}
-        </MastheadListGroup>
-        <TransitionGroup>
+        <div className="masthead-background">
+          <MastheadListGroup>
+            {items}
+          </MastheadListGroup>
+        </div>
+        <TransitionGroup className="masthead-transition-group">
           {this.state.subItems.length !== 0 &&
             <CSSTransition
               timeout={constants.menuTransition}

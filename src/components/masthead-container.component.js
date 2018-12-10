@@ -77,7 +77,7 @@ export default class MastheadContainer extends Component {
         <div className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
           {this._getMenuTitle()}
         </div>
-        <TransitionGroup>
+        <TransitionGroup className="masthead-transition-group">
           <CSSTransition
             timeout={constants.menuTransition}
             classNames="masthead">
