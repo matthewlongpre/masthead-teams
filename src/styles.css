@@ -28,6 +28,14 @@ body {
 
 .masthead-header {
   padding: 20px 0;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+  flex: 0 0 180px;
+}
+
+.masthead-content {
+  flex: 1 1 calc(100% - 180px);
 }
 
 .logo {
@@ -57,6 +65,7 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
   height: max-content;
   max-height: 100vh;
   position: absolute;
@@ -135,9 +144,11 @@ body {
 }
 
 .menu-title {
-  position: absolute;
-  top: 0;
-  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 /* 
