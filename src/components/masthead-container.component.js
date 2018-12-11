@@ -71,24 +71,28 @@ export default class MastheadContainer extends Component {
 
     return (
       <div className="masthead-container">
-        {/* <header className="masthead-header">
-          <img className="logo" src={logo} />
-        </header> */}
-        <div className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
-          {this._getMenuTitle()}
-        </div>
-        <TransitionGroup className="masthead-transition-group">
-          <CSSTransition
-            timeout={constants.menuTransition}
-            classNames="masthead">
-            <MastheadList
-              depth={0}
-              items={menu}
-              menuState={menuState}
-              _changeMenuState={(index, id) => this._changeMenuState(index, id)}
-            />
-          </CSSTransition>
-        </TransitionGroup>
+        <header className="masthead-header">
+          <img alt="Logo" className="logo" src={logo} />
+          {menuState.length !== 0 &&
+          <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
+            <i className="material-icons">chevron_left</i>
+            {this._getMenuTitle()}
+          </button>}
+        </header>
+        <main className="masthead-content">
+          <TransitionGroup className="masthead-transition-group">
+            <CSSTransition
+              timeout={constants.menuTransition}
+              classNames="masthead">
+              <MastheadList
+                depth={0}
+                items={menu}
+                menuState={menuState}
+                _changeMenuState={(index, id) => this._changeMenuState(index, id)}
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        </main>
       </div>
     );
   }

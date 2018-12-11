@@ -82,7 +82,7 @@ const Tile = (props) => {
       <MastheadItem {...props} />
     </button>
     :
-    <a className="masthead-tile" href="">
+    <a className="masthead-tile" href={props.url} target="_blank" rel="noopener noreferrer">
       <MastheadItem {...props} />
     </a>
 }
