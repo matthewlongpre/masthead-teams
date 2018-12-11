@@ -73,7 +73,9 @@ export default class MastheadContainer extends Component {
       <div className="masthead-container">
         <header className="masthead-header">
           <img alt="Logo" className="logo" src={logo} />
-          {menuState.length !== 0 && <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
+          {menuState.length !== 0 &&
+          <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
+            <i className="material-icons">chevron_left</i>
             {this._getMenuTitle()}
           </button>}
         </header>
