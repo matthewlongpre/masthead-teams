@@ -92,6 +92,7 @@ body {
   transition: 0.3s all ease-in-out;
   overflow: hidden;
   text-decoration: none;
+  position: relative;
 }
 
 .masthead-tile:before {
@@ -114,6 +115,25 @@ body {
 .icon {
   font-size: calc(24px + (64 - 24) * ((100vw - 300px) / (1600 - 300)));
   margin-bottom: 20px;
+}
+
+.masthead-subitems {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.66em;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.masthead-subitems i {
+  font-size: 1em;
+  position: relative;
+  top: 2px;
+}
+
+.muted {
+  opacity: 0.8;
 }
 
 .text-overflow {
