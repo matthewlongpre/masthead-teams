@@ -5,6 +5,7 @@ import data from './../mock-data';
 import logo from './../logo.svg';
 import './../styles.css'
 import MastheadList from './masthead-list.component';
+import MastheadSearch from "./masthead-search.component";
 import * as microsoftTeams from "@microsoft/teams-js";
 microsoftTeams.initialize();
 
@@ -65,7 +66,7 @@ export default class MastheadContainer extends Component {
 
 
   render() {
-    const { data, menuState } = this.state;
+    const { data, menuState, flatMenu } = this.state;
 
     let menu = data.menu;
 
@@ -73,6 +74,8 @@ export default class MastheadContainer extends Component {
       <div className="masthead-container">
         <header className="masthead-header">
           <img alt="Logo" className="logo" src={logo} />
+          <MastheadSearch items={menu} />
+
           {menuState.length !== 0 &&
           <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
             <i className="material-icons">chevron_left</i>
