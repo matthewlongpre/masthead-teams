@@ -71,12 +71,12 @@ export default class MastheadContainer extends Component {
   }
 
   render() {
-    const { data, menuState, flatMenu } = this.state;
+    const { data, menuState } = this.state;
 
     let menu = data.menu;
 
     return (
-      <div className="masthead-container">
+      <div className="masthead-container max-width m-auto">
         <header className="masthead-header">
           <img alt="Logo" className="logo" src={logo} />
           <MastheadSearch items={menu} handleSuggestionClick={(menuState) => this.handleSuggestionClick(menuState)} />

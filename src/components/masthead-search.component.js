@@ -85,15 +85,25 @@ class MastheadSearch extends Component {
 
   renderSuggestion = suggestion => {
     return suggestion.menu && suggestion.menu.length !== 0
-    ?
-    <button onClick={() => this._handleClick(suggestion._id)} target="_blank">
-      <div className="text-overflow">{suggestion.title}</div>
-    </button>
-    :
-    <a href={suggestion.url} target="_blank">
-      <div className="text-overflow">{suggestion.title}</div>
-      {suggestion.url !== "/" && <div className="muted font-sm text-overflow">{suggestion.url}</div>}
-    </a>
+      ?
+      <button onClick={() => this._handleClick(suggestion._id)} target="_blank">
+        <div className="suggestion-icon">
+          <i className="material-icons">{suggestion.icon}</i>
+        </div>
+        <div className="suggestion-text">
+          <div className="text-overflow">{suggestion.title}</div>
+        </div>
+      </button>
+      :
+      <a href={suggestion.url} target="_blank" rel="noopener noreferrer">
+        <div className="suggestion-icon">
+          <i className="material-icons">{suggestion.icon}</i>
+        </div>
+        <div className="suggestion-text">
+          <div className="text-overflow">{suggestion.title}</div>
+          {suggestion.url !== "/" && <div className="muted font-sm text-overflow">{suggestion.url}</div>}
+        </div>
+      </a>
   };
 
   render() {

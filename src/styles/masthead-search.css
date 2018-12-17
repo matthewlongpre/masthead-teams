@@ -16,10 +16,10 @@
 .react-autosuggest__suggestions-container {
   position: absolute;
   top: 65px;
-  width: 100%;
+  width: calc(100% - 40px);
   max-height: 33vh;
   z-index: 1200;
-  background: #181818;
+  background: #252525;
   overflow-y: auto;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .react-autosuggest__suggestion {
-  padding: 20px;
+  padding: 0px;
 }
 
 .font-sm {
@@ -40,13 +40,27 @@
 .react-autosuggest__suggestions-list a, .react-autosuggest__suggestions-list button {
   color: #fff;
   text-decoration: none;
-  display: block;
+  display: flex;
   background: 0;
   border: 0;
   font-size: 1rem;
   text-align: left;
+  width: 100%;
+  padding: 20px 20px 20px 10px;
+  transition: 0.3s all ease-in-out;
 }
 
 .react-autosuggest__suggestions-list a:hover, .react-autosuggest__suggestions-list button:hover {
   cursor: pointer;
+  background: #333;
+}
+
+.suggestion-icon {
+  display: flex;
+  justify-content: center;
+  flex-basis: 50px;
+}
+
+.suggestion-text {
+  width: 100%;
 }
