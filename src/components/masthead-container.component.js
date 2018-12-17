@@ -64,6 +64,11 @@ export default class MastheadContainer extends Component {
     return null;
   }
 
+  handleSuggestionClick(menuState) {
+    this.setState({
+      menuState: menuState
+    });
+  }
 
   render() {
     const { data, menuState, flatMenu } = this.state;
@@ -74,7 +79,7 @@ export default class MastheadContainer extends Component {
       <div className="masthead-container">
         <header className="masthead-header">
           <img alt="Logo" className="logo" src={logo} />
-          <MastheadSearch items={menu} />
+          <MastheadSearch items={menu} handleSuggestionClick={(menuState) => this.handleSuggestionClick(menuState)} />
 
           <div className="menu-title-container">
             {menuState.length !== 0 &&

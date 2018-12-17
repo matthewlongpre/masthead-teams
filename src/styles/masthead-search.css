@@ -36,3 +36,17 @@
 .font-sm {
   font-size: 66%;
 }
+
+.react-autosuggest__suggestions-list a, .react-autosuggest__suggestions-list button {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  background: 0;
+  border: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.react-autosuggest__suggestions-list a:hover, .react-autosuggest__suggestions-list button:hover {
+  cursor: pointer;
+}
