@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
 import createTrie from 'autosuggest-trie';
 
+import "./../styles/masthead-search.css";
+
 
 class MastheadSearch extends Component {
   constructor() {
@@ -73,8 +75,8 @@ class MastheadSearch extends Component {
   // Use your imagination to render suggestions.
   renderSuggestion = suggestion => (
     <div>
-      {suggestion.title}
-      {suggestion.url !== "/" && <div className="muted">{suggestion.url}</div>}
+      <div className="text-overflow">{suggestion.title}</div>
+      {suggestion.url !== "/" && <div className="muted font-sm text-overflow">{suggestion.url}</div>}
     </div>
   );
 
@@ -83,7 +85,7 @@ class MastheadSearch extends Component {
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: 'Type a programming language',
+      placeholder: 'Search the menu...',
       value,
       onChange: this.onChange
     };
