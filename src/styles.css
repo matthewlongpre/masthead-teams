@@ -30,20 +30,42 @@ body {
   width: 100%;
   margin: auto;
   flex-direction: column;
-  flex: 0 0 180px;
+  flex: 0 0 200px;
   justify-content: space-around;
 }
 
 .masthead-content {
-  flex: 1 1 calc(100% - 180px);
+  flex: 1 1 calc(100% - 200px);
   display: flex;
   position: relative;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
+/* temp scrollbar styles */
+
+.masthead-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.masthead-content::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+.masthead-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #202020;
+}
+
+/* end temp scrollbar styles */
+
 .logo {
-  width: 300px;
-  height: 89px;
+  height: 60px;
 }
 
 .masthead-container {
@@ -68,7 +90,6 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px;
   height: max-content;
   max-height: 100%;
   position: absolute;
@@ -76,7 +97,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .masthead-tile {
@@ -92,6 +113,7 @@ body {
   transition: 0.3s all ease-in-out;
   overflow: hidden;
   text-decoration: none;
+  position: relative;
 }
 
 .masthead-tile:before {
@@ -114,6 +136,25 @@ body {
 .icon {
   font-size: calc(24px + (64 - 24) * ((100vw - 300px) / (1600 - 300)));
   margin-bottom: 20px;
+}
+
+.masthead-subitems {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.66em;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.masthead-subitems i {
+  font-size: 1em;
+  position: relative;
+  top: 2px;
+}
+
+.muted {
+  opacity: 0.8;
 }
 
 .text-overflow {
@@ -146,6 +187,11 @@ body {
   transition: transform 300ms ease-in, opacity 300ms ease-in;
 }
 
+.menu-title-container {
+  width: 100%;
+  min-height: 60px;
+}
+
 .menu-title {
   width: 100%;
   display: flex;
@@ -160,6 +206,14 @@ body {
 
 .menu-title i {
   margin-right: 5px;
+}
+
+.max-width {
+  max-width: 1200px;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 /* 

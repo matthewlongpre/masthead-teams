@@ -5,6 +5,7 @@ import data from './../mock-data';
 import logo from './../logo.svg';
 import './../styles.css'
 import MastheadList from './masthead-list.component';
+import MastheadSearch from "./masthead-search.component";
 import * as microsoftTeams from "@microsoft/teams-js";
 microsoftTeams.initialize();
 
@@ -63,6 +64,11 @@ export default class MastheadContainer extends Component {
     return null;
   }
 
+  handleSuggestionClick(menuState) {
+    this.setState({
+      menuState: menuState
+    });
+  }
 
   render() {
     const { data, menuState } = this.state;
@@ -70,14 +76,18 @@ export default class MastheadContainer extends Component {
     let menu = data.menu;
 
     return (
-      <div className="masthead-container">
+      <div className="masthead-container max-width m-auto">
         <header className="masthead-header">
           <img alt="Logo" className="logo" src={logo} />
-          {menuState.length !== 0 &&
-          <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
-            <i className="material-icons">chevron_left</i>
-            {this._getMenuTitle()}
-          </button>}
+          <MastheadSearch items={menu} handleSuggestionClick={(menuState) => this.handleSuggestionClick(menuState)} />
+
+          <div className="menu-title-container">
+            {menuState.length !== 0 &&
+              <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
+                <i className="material-icons">chevron_left</i>
+                {this._getMenuTitle()}
+              </button>}
+          </div>
         </header>
         <main className="masthead-content">
           <TransitionGroup className="masthead-transition-group">

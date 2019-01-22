@@ -80,6 +80,7 @@ const Tile = (props) => {
     ?
     <button className="masthead-tile" onClick={(event) => props._handleClick(props.depth, props._id, event)}>
       <MastheadItem {...props} />
+      <MastheadSubItems menu={props.menu} />
     </button>
     :
     <a className="masthead-tile" href={props.url} target="_blank" rel="noopener noreferrer">
@@ -89,11 +90,30 @@ const Tile = (props) => {
 
 const MastheadItem = (props) => {
   return (
-    <Fragment>
-      <div className="tile-wrap">
-        <i className="material-icons icon">{props.icon}</i>
-        <div className="title text-overflow">{props.title}</div>
-      </div>
-    </Fragment>
+    <div className="tile-wrap">
+      <i className="material-icons icon">{props.icon}</i>
+      <div className="title text-overflow">{props.title}</div>
+    </div>
+  );
+}
+
+const MastheadSubItems = (props) => {
+  const menu = props.menu;
+  const subItemCount = menu.length;
+  const subItemLabel = (menu) => {
+    switch (subItemCount) {
+      case 1:
+        return menu[0].title;
+      case 2:
+        return `${menu[0].title} and ${menu[1].title}`;
+      default:
+        return `${menu[0].title}, ${menu[1].title} and ${subItemCount - 2} more`
+    }
+  }
+
+  return (
+    <div className="masthead-subitems text-overflow muted">
+      {subItemLabel(menu)} <i className="material-icons">chevron_right</i>
+    </div>
   );
 }
