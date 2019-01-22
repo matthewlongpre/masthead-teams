@@ -11,13 +11,13 @@ microsoftTeams.initialize();
 
 export default class MastheadContainer extends Component {
   state = {
-    data: data,
+    data: data.v,
     flatMenu: new Map(),
     menuState: []
   }
 
   componentDidMount() {
-    this._processNav(data.menu);
+    this._processNav(data.v.menu);
   }
 
   _processNav(menu) {
