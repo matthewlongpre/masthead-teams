@@ -245,7 +245,7 @@
       {
         "_id": "c44b4ed1-5aa0-5354-bfe0-73adf005ab63",
         "behaviour": 0,
-        "icon": "",
+        "icon": "work",
         "menu": [
           {
             "_id": "e80c2576-cf59-df9d-e2d5-9da4874f1d52",
@@ -439,7 +439,7 @@
       {
         "_id": "c62b0f7e-eeab-3cd0-efe9-d99132fcd0d6",
         "behaviour": 0,
-        "icon": "",
+        "icon": "build",
         "menu": [
           {
             "_id": "568346c8-4212-17bb-c761-1505f8f1a391",

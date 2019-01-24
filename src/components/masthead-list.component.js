@@ -6,7 +6,7 @@ export default class MastheadList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subItems: []
+      subItems: [],
     };
   }
 
@@ -30,10 +30,12 @@ export default class MastheadList extends React.Component {
   }
 
   render() {
-    const items = this.props.items
+    const { depth, items, menuState, _changeMenuState } = this.props;
+    const { subItems } = this.state;
+    const tiles = items
       .map((item) =>
         <Tile
-          depth={this.props.depth}
+          depth={depth}
           key={item._id}
           {...item}
           _handleClick={(index, id, event) => this._handleClick(index, id, event)}
@@ -42,21 +44,21 @@ export default class MastheadList extends React.Component {
 
     return (
       <Fragment>
-        <div className="masthead-background">
+        <div ref={divElement => this.divElement = divElement} className="masthead-background">
           <MastheadListGroup>
-            {items}
+            {tiles}
           </MastheadListGroup>
         </div>
         <TransitionGroup className="masthead-transition-group">
-          {this.state.subItems.length !== 0 &&
+          {subItems.length !== 0 &&
             <CSSTransition
               timeout={constants.menuTransition}
               classNames="masthead">
               <MastheadList
-                items={this.state.subItems}
-                depth={this.props.depth + 1}
-                menuState={this.props.menuState}
-                _changeMenuState={(index, id) => this.props._changeMenuState(index, id)}
+                items={subItems}
+                depth={depth + 1}
+                menuState={menuState}
+                _changeMenuState={(index, id) => _changeMenuState(index, id)}
               />
             </CSSTransition>
           }
@@ -67,38 +69,41 @@ export default class MastheadList extends React.Component {
 }
 
 const MastheadListGroup = (props) => {
-  const count = Children.count(props.children);
+  const { children } = props;
+  const count = Children.count(children);
   return (
     <div className={`masthead-items children-${count}`}>
-      {props.children}
+      {children}
     </div>
   );
 }
 
 const Tile = (props) => {
-  return props.menu && props.menu.length !== 0
+  const { menu, url, depth, _id, _handleClick } = props;
+  return menu && menu.length !== 0
     ?
-    <button className="masthead-tile" onClick={(event) => props._handleClick(props.depth, props._id, event)}>
+    <button className="masthead-tile" onClick={(event) => _handleClick(depth, _id, event)}>
       <MastheadItem {...props} />
-      <MastheadSubItems menu={props.menu} />
+      <MastheadSubItems menu={menu} />
     </button>
     :
-    <a className="masthead-tile" href={props.url} target="_blank" rel="noopener noreferrer">
+    <a className="masthead-tile" href={url} target="_blank" rel="noopener noreferrer">
       <MastheadItem {...props} />
     </a>
 }
 
 const MastheadItem = (props) => {
+  const { icon, title } = props;
   return (
     <div className="tile-wrap">
-      <i className="material-icons icon">{props.icon}</i>
-      <div className="title text-overflow">{props.title}</div>
+      <i className="material-icons icon">{icon}</i>
+      <div className="title text-overflow">{title}</div>
     </div>
   );
 }
 
 const MastheadSubItems = (props) => {
-  const menu = props.menu;
+  const { menu } = props;
   const subItemCount = menu.length;
   const subItemLabel = (menu) => {
     switch (subItemCount) {
