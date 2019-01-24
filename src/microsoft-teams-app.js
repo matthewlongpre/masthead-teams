@@ -4,7 +4,7 @@ import * as microsoftTeams from "@microsoft/teams-js";
 microsoftTeams.initialize();
 
 // Save configuration changes
-microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
   // Let the Microsoft Teams platform know what you want to load based on
   // what the user configured on this page
   microsoftTeams.settings.setSettings({
