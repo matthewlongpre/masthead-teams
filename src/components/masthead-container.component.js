@@ -11,16 +11,11 @@ export default class MastheadContainer extends Component {
   state = {
     data: data.v,
     flatMenu: new Map(),
-    menuState: [],
-    height: 0
+    menuState: []
   }
 
   componentDidMount() {
     this._processNav(data.v.menu);
-    const height = this.divElement.offsetHeight;
-    this.setState({
-      height
-    });
   }
 
   _processNav(menu) {

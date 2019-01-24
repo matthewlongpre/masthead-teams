@@ -7,15 +7,7 @@ export default class MastheadList extends React.Component {
     super(props);
     this.state = {
       subItems: [],
-      height: 0
     };
-  }
-
-  componentDidMount() {
-    const height = this.divElement.clientHeight;
-    this.setState({
-      height
-    });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -40,7 +32,6 @@ export default class MastheadList extends React.Component {
   render() {
     const { depth, items, menuState, _changeMenuState } = this.props;
     const { subItems } = this.state;
-    console.log(this.state.height);
     const tiles = items
       .map((item) =>
         <Tile
