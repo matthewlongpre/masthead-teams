@@ -11,18 +11,23 @@ export default class MastheadContainer extends Component {
   state = {
     data: data.v,
     flatMenu: new Map(),
-    menuState: []
+    menuState: [],
+    height: 0
   }
 
   componentDidMount() {
     this._processNav(data.v.menu);
+    const height = this.divElement.offsetHeight;
+    this.setState({
+      height
+    });
   }
 
   _processNav(menu) {
     const flatMenu = new Map();
     menu.forEach(menu => this._flattenMenu(menu, flatMenu));
     this.setState({
-      flatMenu: flatMenu
+      flatMenu
     });
   }
 
@@ -64,20 +69,18 @@ export default class MastheadContainer extends Component {
 
   handleSuggestionClick(menuState) {
     this.setState({
-      menuState: menuState
+      menuState
     });
   }
 
   render() {
-    const { data, menuState } = this.state;
-
-    let menu = data.menu;
+    const { data: { menu }, menuState } = this.state;
 
     return (
       <div className="masthead-container max-width m-auto">
         <header className="masthead-header">
 
-          <div class="flex align-items-center w-100">
+          <div className="flex align-items-center w-100">
             <img alt="Logo" className="logo" src={logo} />
             <MastheadSearch items={menu} handleSuggestionClick={(menuState) => this.handleSuggestionClick(menuState)} />
           </div>
@@ -90,7 +93,7 @@ export default class MastheadContainer extends Component {
               </button>}
           </div>
         </header>
-        <main className="masthead-content">
+        <main ref={divElement => this.divElement = divElement} className="masthead-content">
           <TransitionGroup className="masthead-transition-group">
             <CSSTransition
               timeout={constants.menuTransition}
