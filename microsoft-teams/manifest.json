@@ -1,0 +1,43 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.3",
+    "version": "1.0.0",
+    "id": "d8653da2-4682-4b92-b659-485087957897",
+    "packageName": "com.masthead.teams.app",
+    "developer": {
+        "name": "itgroove",
+        "websiteUrl": "https://itgroove.net",
+        "privacyUrl": "https://itgroove.net",
+        "termsOfUseUrl": "https://itgroove.net"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Masthead",
+        "full": "Masthead for Teams"
+    },
+    "description": {
+        "short": "Universal navigation",
+        "full": "Universal navigation"
+    },
+    "accentColor": "#1ab0fe",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://itgux.azurewebsites.net/masthead-teams-app/",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team",
+                "groupchat"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "masthead-teams-app.azurewebsites.net"
+    ]
+}
