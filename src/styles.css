@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   flex: 0 0 200px;
   justify-content: space-around;
+  padding: 10px;
 }
 
 .masthead-content {
@@ -208,12 +209,24 @@ body {
   margin-right: 5px;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .max-width {
   max-width: 1200px;
 }
 
 .m-auto {
   margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 /* 

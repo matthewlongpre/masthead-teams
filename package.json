@@ -2,7 +2,7 @@
   "name": "masthead-teams",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://itgux.azurewebsites.net/masthead-teams/",
+  "homepage": "https://itgux.azurewebsites.net/masthead-teams-app/",
   "dependencies": {
     "@microsoft/teams-js": "^1.3.7",
     "autosuggest-trie": "^2.1.1",
