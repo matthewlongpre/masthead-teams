@@ -1,37 +1,33 @@
 import React, { Fragment, Children } from "react";
+import memoize from "memoize-one";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import * as constants from "../../shared/constants";
 
 export default class MastheadList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      subItems: [],
-    };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    for (let i = 0; i < nextProps.items.length; i++) {
-      if (nextProps.items[i]._id === nextProps.menuState[nextProps.depth]) {
-        this.setState({
-          subItems: nextProps.items[i].menu
-        });
-        return;
-      }
-    }
-    this.setState({
-      subItems: []
-    });
-  }
 
   _handleClick(index, id, event) {
     event.nativeEvent.stopImmediatePropagation();
     this.props._changeMenuState(index, id);
   }
 
+  _getSubItems = memoize(
+    (items, menuState, depth) => {
+      let subItems = [];
+      items.forEach(item => {
+        if (item._id === menuState[depth]) {
+            subItems = item.menu
+        }
+      });
+      return subItems;
+    }
+  );
+
   render() {
+
     const { depth, items, menuState, _changeMenuState } = this.props;
-    const { subItems } = this.state;
+
+    const subItems = this._getSubItems(items, menuState, depth);
+
     const tiles = items
       .map((item) =>
         <Tile
