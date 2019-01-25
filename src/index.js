@@ -10,11 +10,13 @@ import "./microsoft-teams-app.js";
 
 const Masthead = () => <MastheadContainer />
 const Config = () => <Configuration />
+const NotFound = () => <div>404 - Not found.</div>
 
 render(
   <Router className="w-100vw h-100vh">
     <Masthead path="/" />
     <Config path="config" />
+    <NotFound default />
   </Router>,
   document.getElementById("root")
 );

@@ -25,7 +25,7 @@
     "accentColor": "#1ab3ff",
     "configurableTabs": [
         {
-            "configurationUrl": "https://itgux.azurewebsites.net/masthead-teams-app/",
+            "configurationUrl": "https://itgux.azurewebsites.net/masthead-teams-app/config",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team",
