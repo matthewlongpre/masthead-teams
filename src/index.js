@@ -6,7 +6,6 @@ import MastheadContainer from "./components/masthead-container/masthead-containe
 import Configuration from "./components/configuration/configuration.component";
 
 import * as serviceWorker from "./serviceWorker";
-import "./microsoft-teams-app.js";
 
 const Masthead = () => <MastheadContainer />
 const Config = () => <Configuration />

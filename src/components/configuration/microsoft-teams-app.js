@@ -8,8 +8,8 @@ microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
   // Let the Microsoft Teams platform know what you want to load based on
   // what the user configured on this page
   microsoftTeams.settings.setSettings({
-    contentUrl: 'https://itgux.azurewebsites.net/masthead-teams-app/', // Mandatory parameter
-    entityId: 'https://itgux.azurewebsites.net/masthead-teams-app/' // Mandatory parameter
+    contentUrl: 'https://masthead-teams.azurewebsites.net/', // Mandatory parameter
+    entityId: 'https://masthead-teams.azurewebsites.net/' // Mandatory parameter
   });
 
   // Tells Microsoft Teams platform that we are done saving our settings. Microsoft Teams waits

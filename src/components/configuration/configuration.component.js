@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./microsoft-teams-app.js";
 import MastheadLogo from "../masthead-logo/masthead-logo";
 import PageBackground from "./configuration.styles";
 
