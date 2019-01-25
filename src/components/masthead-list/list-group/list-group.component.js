@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 
-const MastheadListGroup = (props) => {
+const ListGroup = (props) => {
   const { children } = props;
   const count = Children.count(children);
   return (
@@ -10,4 +10,4 @@ const MastheadListGroup = (props) => {
   );
 }
 
-export default MastheadListGroup;
+export default ListGroup;
