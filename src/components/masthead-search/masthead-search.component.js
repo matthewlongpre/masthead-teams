@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Autosuggest from 'react-autosuggest';
-import createTrie from 'autosuggest-trie';
+import React, { Component } from "react";
+import Autosuggest from "react-autosuggest";
+import createTrie from "autosuggest-trie";
 
-import "./../styles/masthead-search.css";
+import "./../../styles/masthead-search.css";
 
 
 class MastheadSearch extends Component {
@@ -10,7 +10,7 @@ class MastheadSearch extends Component {
     super(props);
 
     this.state = {
-      value: '',
+      value: "",
       suggestions: []
     };
 
@@ -53,7 +53,7 @@ class MastheadSearch extends Component {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
-    const trie = createTrie(this.flatMenuArray, 'title');
+    const trie = createTrie(this.flatMenuArray, "title");
     return inputLength === 0 ? [] : trie.getMatches(inputValue);
 
   };
@@ -110,7 +110,7 @@ class MastheadSearch extends Component {
     const { value, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: 'Search the menu...',
+      placeholder: "Search the menu...",
       value,
       onChange: this.onChange
     };

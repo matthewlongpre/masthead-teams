@@ -215,6 +215,14 @@ body {
   width: 100%;
 }
 
+.w-100vw {
+  width: 100vw;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
 .max-width {
   max-width: 1200px;
 }

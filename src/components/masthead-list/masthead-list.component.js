@@ -1,6 +1,6 @@
-import React, { Fragment, Children } from 'react';
+import React, { Fragment, Children } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import * as constants from "./../shared/constants";
+import * as constants from "../../shared/constants";
 
 export default class MastheadList extends React.Component {
   constructor(props) {

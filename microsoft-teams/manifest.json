@@ -22,7 +22,7 @@
         "short": "Universal navigation",
         "full": "Universal navigation"
     },
-    "accentColor": "#1ab0fe",
+    "accentColor": "#1ab3ff",
     "configurableTabs": [
         {
             "configurationUrl": "https://itgux.azurewebsites.net/masthead-teams-app/",
