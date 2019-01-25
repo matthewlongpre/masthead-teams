@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `gulp generate-manifest`
 
-This creates a zip file with the `manifest.json` file, and the icons used in Microsoft Teams.
+This creates a zip file with the `manifest.json` file, and the icons used in Microsoft Teams. The zip file will be created in `microsoft-teams/deploy`.
 
 ### `npm start`
 

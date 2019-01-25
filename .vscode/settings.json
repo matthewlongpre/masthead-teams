@@ -1,0 +1,7 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}"
+  ],
+  "appService.deploySubpath": "build",
+  "appService.defaultWebAppToDeploy": "/subscriptions/3aeb0b5d-a6a0-41d8-96c3-5ca952b0d05c/resourceGroups/masthead-teams/providers/Microsoft.Web/sites/masthead-teams"
+}
