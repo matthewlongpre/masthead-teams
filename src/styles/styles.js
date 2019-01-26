@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { createGlobalStyle } from "styled-components";
-import colors from "./colors";
 import layout from "./layout";
 
 const S = {};
@@ -17,10 +16,15 @@ S.Global = createGlobalStyle`
   }
 
   body {
-    background: ${colors["bg-02"]};
-    color: ${colors["fg-01"]};
     overflow-x: hidden;
     margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem
+  }
+
+  body, input, textarea, select, button, a {
+    font-family: 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
   }
 
   .font-sm {
@@ -59,7 +63,7 @@ S.Global = createGlobalStyle`
 
 `
 
-const textOverflowEllipsis = `
+const textOverflowEllipsis = css`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -68,15 +72,15 @@ const textOverflowEllipsis = `
   line-height: 1.4;
 `;
 
-const muted = `
-  opacity: 0.8;
+const muted = css`
+  opacity: ${({ theme }) => theme["gray-02"]};
 `;
 
-const maxWidth = `
+const maxWidth = css`
   max-width: 1200px;
 `;
 
-const flexCenter = `
+const flexCenter = css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,12 +92,13 @@ S.Logo = styled.img`
 
 S.Header = styled.header`
   ${flexCenter}
+  ${maxWidth}
 
   width: 100%;
   margin: auto;
   padding: 0 22px 0 0;
   flex-direction: column;
-  flex: 0 0 200px;
+  flex: 0 0 ${layout["header-height"]};
   justify-content: space-around;
 
 `;
@@ -115,9 +120,9 @@ S.MenuTitle = styled.div`
     align-items: center;
     height: 60px;
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-    background: ${colors["bg-01"]};
+    background: ${({ theme }) => theme["bg-01"]};
     border: 0;
-    color: ${colors["fg-01"]};
+    color: ${({ theme }) => theme["fg-01"]};
     box-shadow: ${layout["box-shadow-01"]};
 
     i {
@@ -128,7 +133,9 @@ S.MenuTitle = styled.div`
 `;
 
 S.Main = styled.main`
-  flex: 1 1 calc(100% - 200px);
+  ${maxWidth}
+
+  flex: 1 1 calc(100% - ${layout["header-height"]});
   display: flex;
   position: relative;
   width: 100%;
@@ -149,15 +156,17 @@ S.Main = styled.main`
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: ${colors["bg-01"]};
+    background-color: ${({ theme }) => theme["bg-01"]};
   }
 
 `;
 
 S.Container = styled.div`
 
-  ${maxWidth}
   ${flexCenter}
+
+  background: ${({ theme }) => theme["bg-02"]};
+  color: ${({ theme }) => theme["fg-01"]};
 
   width: 100%;
   height: 100%;
@@ -169,7 +178,7 @@ S.Container = styled.div`
 `;
 
 S.Background = styled.div`
-  background: ${colors["bg-02"]};
+  background: ${({ theme }) => theme["bg-02"]};
   width: 100%;
   height: 100%;
   position: absolute;
@@ -179,7 +188,7 @@ S.Background = styled.div`
   right: 0;
 `;
 
-const Tile = `
+const tile = css`
 
   ${flexCenter}
 
@@ -187,9 +196,9 @@ const Tile = `
   flex: 1 0 24%;
   max-width: calc(33.3333vw - 20px);
   justify-content: center;
-  color: ${colors["fg-01"]};
-  border: 0;
-  background: ${colors["bg-01"]};
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin: 5px;
   padding: 10px;
@@ -197,6 +206,10 @@ const Tile = `
   overflow: hidden;
   text-decoration: none;
   box-shadow: ${layout["box-shadow-01"]};
+
+  color: ${({ theme }) => theme["fg-01"]};
+  background: ${({ theme }) => theme["tile-bg"]};
+  border-color: ${({ theme }) => theme["tile-border"]};
 
   &:before {
     content: '';
@@ -211,11 +224,11 @@ const Tile = `
 `;
 
 S.TileLink = styled.a`
-  ${Tile}
+  ${tile}
 `;
 
 S.TileButton = styled.button`
-  ${Tile}
+  ${tile}  
 `;
 
 S.Items = styled.div`
@@ -223,13 +236,6 @@ S.Items = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  height: max-content;
-  max-height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: 0 auto;
 `;
 
@@ -259,7 +265,7 @@ S.SubItems = styled.div`
   right: 0;
   font-size: 0.66em;
   padding: 1em;
-  background: ${colors["gray-96"]};
+  background: ${({ theme }) => theme["gray-96"]};
   width: 100%;
   text-align: right;
 
@@ -291,10 +297,16 @@ S.Search = styled.div`
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    background: ${colors["bg-01"]};
-    color: ${colors["fg-01"]};
-    border: 0;
+    background: ${({ theme }) => theme["input-bg"]};
+    color: ${({ theme }) => theme["input-fg"]};
+    border-width: 1px;
+    border-style: solid;
     border-radius: ${layout["border-radius"]};
+    border-color: ${({ theme }) => theme["input-border"]};
+
+    &::placeholder {
+      color: ${({ theme }) => theme["input-placeholder"]};
+    }
   }
 
   .react-autosuggest__suggestions-container {
@@ -303,7 +315,7 @@ S.Search = styled.div`
     width: calc(100% - 20px);
     max-height: 33vh;
     z-index: 1200;
-    background: #fff;
+    background: ${({ theme }) => theme["bg-01"]};
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: ${layout["box-shadow-02"]};
@@ -321,7 +333,7 @@ S.Search = styled.div`
   }
 
   .react-autosuggest__suggestions-list a, .react-autosuggest__suggestions-list button {
-    color: ${colors["fg-01"]};
+    color: ${({ theme }) => theme["fg-01"]};
     text-decoration: none;
     display: flex;
     background: 0;
@@ -335,7 +347,7 @@ S.Search = styled.div`
 
   .react-autosuggest__suggestions-list a:hover, .react-autosuggest__suggestions-list button:hover {
     cursor: pointer;
-    background: ${colors["bg-02"]};
+    background: ${({ theme }) => theme["bg-02"]};
   }
 
   .suggestion-icon {

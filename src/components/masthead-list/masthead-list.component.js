@@ -18,12 +18,14 @@ export default class MastheadList extends React.Component {
       let subItems = [];
       items.forEach(item => {
         if (item._id === menuState[depth]) {
-            subItems = item.menu
+          subItems = item.menu
         }
       });
       return subItems;
     }
   );
+
+  itemContainer = null;
 
   render() {
 
@@ -49,7 +51,7 @@ export default class MastheadList extends React.Component {
           </ListGroup>
         </S.Background>
 
-        <TransitionGroup className="masthead-transition-group">
+        <TransitionGroup className="masthead-transition-group" >
 
           {subItems.length !== 0 &&
             <CSSTransition
@@ -63,7 +65,7 @@ export default class MastheadList extends React.Component {
               />
             </CSSTransition>
           }
-          
+
         </TransitionGroup>
       </>
     );
