@@ -47,7 +47,7 @@ theme.dark = {
   "gray-96": `rgba(${base} .06)`,
   "bg-01": `#000`,
   "bg-02": `#201f1f`,
-  "bg-03": `#222226`,
+  "bg-03": `#3b3a3a`,
   "tile-bg": `#2d2c2c`,
   "tile-border": `#2d2c2c`,
   "input-bg": `#292828`,
