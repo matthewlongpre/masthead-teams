@@ -63,6 +63,25 @@ S.Global = createGlobalStyle`
 
 `
 
+const scrollBars = css`
+  &::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+    background-color: ${({ theme }) => theme["bg-01"]};
+  }
+`;
+
 const textOverflowEllipsis = css`
   text-overflow: ellipsis;
   overflow: hidden;
@@ -120,7 +139,7 @@ S.MenuTitle = styled.div`
     align-items: center;
     height: 60px;
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-    background: ${({ theme }) => theme["bg-01"]};
+    background: ${({ theme }) => theme["menu-title-bg"]};
     border: 0;
     color: ${({ theme }) => theme["fg-01"]};
     box-shadow: ${layout["box-shadow-01"]};
@@ -142,22 +161,7 @@ S.Main = styled.main`
   overflow-y: auto;
   overflow-x: hidden;
 
-  &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: transparent;
-  }
-  
-  &::-webkit-scrollbar {
-    width: 12px;
-    background-color: transparent;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: ${({ theme }) => theme["bg-01"]};
-  }
+  ${scrollBars}
 
 `;
 
@@ -198,7 +202,7 @@ const tile = css`
   justify-content: center;
   border-width: 2px;
   border-style: solid;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin: 5px;
   padding: 10px;
@@ -315,11 +319,12 @@ S.Search = styled.div`
     width: calc(100% - 20px);
     max-height: 33vh;
     z-index: 1200;
-    background: ${({ theme }) => theme["bg-01"]};
+    background: ${({ theme }) => theme["bg-03"]};
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: ${layout["box-shadow-02"]};
     border-radius: ${layout["border-radius"]};
+    ${scrollBars}
   }
 
   .react-autosuggest__suggestions-list {

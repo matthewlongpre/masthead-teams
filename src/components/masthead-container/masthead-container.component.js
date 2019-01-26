@@ -20,7 +20,7 @@ export default class MastheadContainer extends Component {
     data: data.v,
     flatMenu: new Map(),
     menuState: [],
-    theme: theme["light"]
+    theme: theme["dark"]
   }
 
   componentDidMount() {

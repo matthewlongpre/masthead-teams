@@ -19,12 +19,14 @@ theme.light = {
   "gray-96": `rgba(${base} .06)`,
   "bg-01": `#fff`,
   "bg-02": `#f3f2f1`,
+  "bg-03": `#EEF1F5`,
   "tile-bg": `#fff`,
   "tile-border": `#fff`,
   "input-bg": `#edebe9`,
   "input-fg": `#484644`,
   "input-border": `#edebe9`,
-  "input-placeholder": `${() => this["gray-03"]}}`
+  "input-placeholder": `rgba(${base} .64)`,
+  "menu-title-bg": `#fff`
 }
 
 base = "255, 255, 255,";
@@ -45,12 +47,14 @@ theme.dark = {
   "gray-96": `rgba(${base} .06)`,
   "bg-01": `#000`,
   "bg-02": `#201f1f`,
+  "bg-03": `#222226`,
   "tile-bg": `#2d2c2c`,
   "tile-border": `#2d2c2c`,
   "input-bg": `#292828`,
   "input-fg": `#fcfcfc`,
   "input-border": `#292828`,
-  "input-placeholder": `${() => this["gray-03"]}}`
+  "input-placeholder": `rgba(${base} .64)`,
+  "menu-title-bg": `#2d2c2c`
 }
 
 base = "255, 255, 255,";
@@ -58,7 +62,7 @@ base = "255, 255, 255,";
 theme.contrast = {
   "name": "contrast",
   "fg-01": `#fff`,
-  "fg-02": `#29384F`,
+  "fg-02": `#fff`,
   "gray-02": `rgba(${base} 1)`,
   "gray-03": `rgba(${base} 1)`,
   "gray-04": `rgba(${base} 1)`,
@@ -71,11 +75,13 @@ theme.contrast = {
   "gray-96": `#000`,
   "bg-01": `#000`,
   "bg-02": `#000`,
+  "bg-03": `#000`,
   "tile-bg": `#000`,
   "tile-border": `#fff`,
   "input-bg": `#000`,
   "input-fg": `#fff`,
   "input-placeholder": `#fff`,
+  "menu-title-bg": `#000`
 }
 
 export default theme;
