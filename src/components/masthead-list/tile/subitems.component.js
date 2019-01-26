@@ -1,4 +1,5 @@
 import React from "react";
+import S from "./../../../styles/styles";
 
 const SubItems = (props) => {
   const { menu } = props;
@@ -15,9 +16,9 @@ const SubItems = (props) => {
   }
 
   return (
-    <div className="masthead-subitems text-overflow muted">
+    <S.SubItems className="muted">
       {subItemLabel(menu)} <i className="material-icons">chevron_right</i>
-    </div>
+    </S.SubItems>
   );
 }
 

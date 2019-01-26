@@ -1,12 +1,13 @@
 import React, { Children } from "react";
+import S from "./../../styles/styles";
 
 const ListGroup = (props) => {
   const { children } = props;
   const count = Children.count(children);
   return (
-    <div className={`masthead-items children-${count}`}>
+    <S.Items className={`children-${count}`}>
       {children}
-    </div>
+    </S.Items>
   );
 }
 

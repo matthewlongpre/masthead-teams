@@ -6,6 +6,7 @@ import logo from "./../../logo.svg";
 import "./../../styles.css"
 import MastheadList from "../masthead-list/masthead-list.component";
 import MastheadSearch from "../masthead-search/masthead-search.component";
+import S from "./../../styles/styles";
 
 export default class MastheadContainer extends Component {
   state = {
@@ -72,23 +73,27 @@ export default class MastheadContainer extends Component {
     const { data: { menu }, menuState } = this.state;
 
     return (
-      <div className="masthead-container max-width m-auto">
-        <header className="masthead-header">
+      <S.Container>
+        <S.Header>
 
-          <div className="flex align-items-center w-100">
-            <img alt="Logo" className="logo" src={logo} />
-            <MastheadSearch items={menu} handleSuggestionClick={(menuState) => this.handleSuggestionClick(menuState)} />
-          </div>
+          <S.HeaderRow>
+            <S.Logo alt="Logo" src={logo} />
+            <MastheadSearch
+              items={menu}
+              handleSuggestionClick={menuState => this.handleSuggestionClick(menuState)}
+            />
+          </S.HeaderRow>
 
-          <div className="menu-title-container">
+          <S.MenuTitle>
             {menuState.length !== 0 &&
-              <button className="menu-title" onClick={(event) => this._moveBackOneMenu(event)}>
+              <button onClick={event => this._moveBackOneMenu(event)}>
                 <i className="material-icons">chevron_left</i>
                 {this._getMenuTitle()}
               </button>}
-          </div>
-        </header>
-        <main ref={divElement => this.divElement = divElement} className="masthead-content">
+          </S.MenuTitle>
+
+        </S.Header>
+        <S.Main>
           <TransitionGroup className="masthead-transition-group">
             <CSSTransition
               timeout={constants.menuTransition}
@@ -101,8 +106,8 @@ export default class MastheadContainer extends Component {
               />
             </CSSTransition>
           </TransitionGroup>
-        </main>
-      </div>
+        </S.Main>
+      </S.Container>
     );
   }
 }

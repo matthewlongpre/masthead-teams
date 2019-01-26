@@ -2,8 +2,9 @@ import React from "react";
 import memoize from "memoize-one";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Tile from "./tile/tile.component";
-import ListGroup from "./list-group/list-group.component";
+import ListGroup from "./list-group.component";
 import * as constants from "../../shared/constants";
+import S from "./../../styles/styles";
 
 export default class MastheadList extends React.Component {
 
@@ -42,11 +43,11 @@ export default class MastheadList extends React.Component {
 
     return (
       <>
-        <div ref={divElement => this.divElement = divElement} className="masthead-background">
+        <S.Background>
           <ListGroup>
             {tiles}
           </ListGroup>
-        </div>
+        </S.Background>
         <TransitionGroup className="masthead-transition-group">
           {subItems.length !== 0 &&
             <CSSTransition
