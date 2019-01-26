@@ -48,7 +48,9 @@ export default class MastheadList extends React.Component {
             {tiles}
           </ListGroup>
         </S.Background>
+
         <TransitionGroup className="masthead-transition-group">
+
           {subItems.length !== 0 &&
             <CSSTransition
               timeout={constants.menuTransition}
@@ -61,6 +63,7 @@ export default class MastheadList extends React.Component {
               />
             </CSSTransition>
           }
+          
         </TransitionGroup>
       </>
     );

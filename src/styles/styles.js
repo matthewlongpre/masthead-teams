@@ -22,6 +22,10 @@ S.Global = createGlobalStyle`
     margin: 0;
   }
 
+  .font-sm {
+    font-size: 66%;
+  }
+
   .w-100vw {
     width: 100vw;
   }
@@ -74,18 +78,6 @@ const flexCenter = `
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const w100 = `
-  width: 100%;
-`;
-
-const w100vw = `
-  width: 100vw;
-`;
-
-const h100vh = `
-  height: 100vh;
 `;
 
 S.Logo = styled.img`
@@ -156,7 +148,6 @@ S.Main = styled.main`
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #202020;
   }
-
 
 `;
 
@@ -266,5 +257,73 @@ S.SubItems = styled.div`
 
 `;
 
+S.Search = styled.div`
+
+  width: 100%;
+
+  .react-autosuggest__container {
+    position: relative;
+    width: 100%;
+    padding: 0 0 0 20px;
+  }
+
+  .react-autosuggest__input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: #252525;
+    color: #fefefe;
+    border: 0;
+  }
+
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    top: 65px;
+    width: calc(100% - 40px);
+    max-height: 33vh;
+    z-index: 1200;
+    background: #252525;
+    overflow-y: auto;
+  }
+
+  .react-autosuggest__suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .react-autosuggest__suggestion {
+    padding: 0px;
+  }
+
+  .react-autosuggest__suggestions-list a, .react-autosuggest__suggestions-list button {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    background: 0;
+    border: 0;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    padding: 20px 20px 20px 10px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .react-autosuggest__suggestions-list a:hover, .react-autosuggest__suggestions-list button:hover {
+    cursor: pointer;
+    background: #333;
+  }
+
+  .suggestion-icon {
+    display: flex;
+    justify-content: center;
+    flex-basis: 50px;
+  }
+
+  .suggestion-text {
+    width: 100%;
+  }
+
+`;
 
 export default S;

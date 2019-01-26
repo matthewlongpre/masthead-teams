@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import Autosuggest from "react-autosuggest";
 import createTrie from "autosuggest-trie";
-
-import "./../../styles/masthead-search.css";
-
+import S from "../../styles/styles";
 
 class MastheadSearch extends Component {
   constructor(props) {
@@ -116,14 +114,16 @@ class MastheadSearch extends Component {
     };
 
     return (
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={this.getSuggestionValue}
-        renderSuggestion={this.renderSuggestion}
-        inputProps={inputProps}
-      />
+      <S.Search>
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          getSuggestionValue={this.getSuggestionValue}
+          renderSuggestion={this.renderSuggestion}
+          inputProps={inputProps}
+        />
+      </S.Search>
     );
   }
 }

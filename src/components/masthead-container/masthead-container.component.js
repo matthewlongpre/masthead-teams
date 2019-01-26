@@ -3,7 +3,6 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import * as constants from "./../../shared/constants";
 import data from "./../../mock-data";
 import logo from "./../../logo.svg";
-import "./../../styles.css"
 import MastheadList from "../masthead-list/masthead-list.component";
 import MastheadSearch from "../masthead-search/masthead-search.component";
 import S from "./../../styles/styles";

@@ -1,13 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
 import { Router } from "@reach/router";
-
 import MastheadContainer from "./components/masthead-container/masthead-container.component";
 import Configuration from "./components/configuration/configuration.component";
-
-import S from "./styles/styles";
-
 import * as serviceWorker from "./serviceWorker";
+import S from "./styles/styles";
 
 const Masthead = () => <MastheadContainer />
 const Config = () => <Configuration />
