@@ -275,7 +275,7 @@ S.SubItems = styled.div`
 
   i {
     font-size: 1em;
-    position: relative;s
+    position: relative;
     top: 2px;
   }
 
