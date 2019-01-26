@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
+import colors from "./colors";
+import layout from "./layout";
 
 const S = {};
 
@@ -7,7 +9,6 @@ S.Global = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: "Segoe UI Light", arial, sans-serif;
   }
 
   html, body, #root {
@@ -16,8 +17,8 @@ S.Global = createGlobalStyle`
   }
 
   body {
-    background: #181818;
-    color: #fafafa;
+    background: ${colors["bg-02"]};
+    color: ${colors["fg-01"]};
     overflow-x: hidden;
     margin: 0;
   }
@@ -64,6 +65,7 @@ const textOverflowEllipsis = `
   white-space: nowrap;
   display: block;
   max-width: 100%;
+  line-height: 1.4;
 `;
 
 const muted = `
@@ -113,9 +115,10 @@ S.MenuTitle = styled.div`
     align-items: center;
     height: 60px;
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-    background: #202020;
+    background: ${colors["bg-01"]};
     border: 0;
-    color: #fff;
+    color: ${colors["fg-01"]};
+    box-shadow: ${layout["box-shadow-01"]};
 
     i {
       margin-right: 5px;
@@ -146,7 +149,7 @@ S.Main = styled.main`
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #202020;
+    background-color: ${colors["bg-01"]};
   }
 
 `;
@@ -166,7 +169,7 @@ S.Container = styled.div`
 `;
 
 S.Background = styled.div`
-  background: #181818;
+  background: ${colors["bg-02"]};
   width: 100%;
   height: 100%;
   position: absolute;
@@ -176,7 +179,7 @@ S.Background = styled.div`
   right: 0;
 `;
 
-S.Tile = styled.div`
+const Tile = `
 
   ${flexCenter}
 
@@ -184,15 +187,16 @@ S.Tile = styled.div`
   flex: 1 0 24%;
   max-width: calc(33.3333vw - 20px);
   justify-content: center;
-  color: #fafafa;
+  color: ${colors["fg-01"]};
   border: 0;
-  background: #202020;
+  background: ${colors["bg-01"]};
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin: 5px;
   padding: 10px;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
   text-decoration: none;
+  box-shadow: ${layout["box-shadow-01"]};
 
   &:before {
     content: '';
@@ -204,6 +208,14 @@ S.Tile = styled.div`
     cursor: pointer;
   }
 
+`;
+
+S.TileLink = styled.a`
+  ${Tile}
+`;
+
+S.TileButton = styled.button`
+  ${Tile}
 `;
 
 S.Items = styled.div`
@@ -247,12 +259,20 @@ S.SubItems = styled.div`
   right: 0;
   font-size: 0.66em;
   padding: 1em;
-  background: rgba(255, 255, 255, 0.025);
+  background: ${colors["gray-96"]};
+  width: 100%;
+  text-align: right;
 
   i {
     font-size: 1em;
     position: relative;s
     top: 2px;
+  }
+
+  display: none;
+
+  @media (min-width: 640px) {
+    display:block;
   }
 
 `;
@@ -271,19 +291,23 @@ S.Search = styled.div`
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    background: #252525;
-    color: #fefefe;
+    background: ${colors["bg-01"]};
+    color: ${colors["fg-01"]};
     border: 0;
+    border-radius: ${layout["border-radius"]};
   }
 
   .react-autosuggest__suggestions-container {
     position: absolute;
-    top: 65px;
-    width: calc(100% - 40px);
+    top: 40px;
+    width: calc(100% - 20px);
     max-height: 33vh;
     z-index: 1200;
-    background: #252525;
+    background: #fff;
     overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: ${layout["box-shadow-02"]};
+    border-radius: ${layout["border-radius"]};
   }
 
   .react-autosuggest__suggestions-list {
@@ -297,7 +321,7 @@ S.Search = styled.div`
   }
 
   .react-autosuggest__suggestions-list a, .react-autosuggest__suggestions-list button {
-    color: #fff;
+    color: ${colors["fg-01"]};
     text-decoration: none;
     display: flex;
     background: 0;
@@ -311,17 +335,21 @@ S.Search = styled.div`
 
   .react-autosuggest__suggestions-list a:hover, .react-autosuggest__suggestions-list button:hover {
     cursor: pointer;
-    background: #333;
+    background: ${colors["bg-02"]};
   }
 
   .suggestion-icon {
     display: flex;
     justify-content: center;
     flex-basis: 50px;
+    min-width: 50px;
   }
 
   .suggestion-text {
-    width: 100%;
+    max-width: calc(100% - 60px);
+    .text-overflow {
+      ${textOverflowEllipsis}
+    }
   }
 
 `;

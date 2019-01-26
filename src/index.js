@@ -5,6 +5,7 @@ import MastheadContainer from "./components/masthead-container/masthead-containe
 import Configuration from "./components/configuration/configuration.component";
 import * as serviceWorker from "./serviceWorker";
 import S from "./styles/styles";
+import "./styles/ms-teams-16.css";
 
 const Masthead = () => <MastheadContainer />
 const Config = () => <Configuration />

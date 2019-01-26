@@ -7,6 +7,8 @@ import MastheadList from "../masthead-list/masthead-list.component";
 import MastheadSearch from "../masthead-search/masthead-search.component";
 import S from "./../../styles/styles";
 
+import * as microsoftTeams from "@microsoft/teams-js";
+
 export default class MastheadContainer extends Component {
   state = {
     data: data.v,
@@ -16,6 +18,31 @@ export default class MastheadContainer extends Component {
 
   componentDidMount() {
     this._processNav(data.v.menu);
+
+
+    // Call the initialize API first
+    microsoftTeams.initialize();
+
+    // Check the initial theme user chose and respect it
+    microsoftTeams.getContext(context => {
+      if (context && context.theme) {
+          this.setTheme(context.theme);
+      }
+    });
+
+    // Handle theme changes
+    microsoftTeams.registerOnThemeChangeHandler(theme => {
+      this.setTheme(theme);
+    });
+
+  }
+
+  // Set the desired theme
+  setTheme = (theme) => {
+    if (theme) {
+      // Possible values for theme: 'default', 'light', 'dark' and 'contrast'
+      document.body.className = 'theme-' + (theme === 'default' ? 'light' : theme);
+    }
   }
 
   _processNav(menu) {
@@ -72,7 +99,7 @@ export default class MastheadContainer extends Component {
     const { data: { menu }, menuState } = this.state;
 
     return (
-      <S.Container>
+      <S.Container className="surface">
         <S.Header>
 
           <S.HeaderRow>
