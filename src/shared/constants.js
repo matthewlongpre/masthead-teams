@@ -1,4 +1,7 @@
 export const apiURL = "https://sp.masthead365.com/api/";
+
+// export const apiURL ="https://mastheadapidev.azurewebsites.net/api/";
+
 export const authURL = "https://sp.masthead365.com/";
 export const imageURL = "https://prod.masthead365.com/";
 
