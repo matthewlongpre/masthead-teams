@@ -1,4 +1,3 @@
-
 const theme = {};
 
 let base = "22, 35, 58,";
@@ -56,8 +55,6 @@ theme.dark = {
   "input-placeholder": `rgba(${base} .64)`,
   "menu-title-bg": `#2d2c2c`
 }
-
-base = "255, 255, 255,";
 
 theme.contrast = {
   "name": "contrast",
