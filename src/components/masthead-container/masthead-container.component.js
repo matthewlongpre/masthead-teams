@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import * as constants from "./../../shared/constants";
-import data from "./../../data/mock-data.json";
 
 import logoLight from "./../../data/logo-light.svg";
 import logoDark from "./../../data/logo-dark.svg";
@@ -65,7 +64,7 @@ export default class MastheadContainer extends Component {
   }
 
   _getMastheadVersion() {
-    return this._mastheadRequest(window.savedToken, "GET", `https://sp.masthead365.com/api/getNav`)
+    return this._mastheadRequest(window.savedToken, "GET", `${constants.apiURL}getNav`)
       .then(request => {
         if (request.status === 200) {
           let data;
@@ -158,7 +157,7 @@ export default class MastheadContainer extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <S.Container className="surface">
+        <S.Container>
           <S.Header>
 
             <S.HeaderRow>
