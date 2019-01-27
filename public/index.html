@@ -19,6 +19,19 @@
   <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Masthead for Teams</title>
+
+
+  <script>
+    var userProfile = {
+      clientId: "75ce4e02-e37b-479c-81c7-438348a2a251",
+      redirectUri: "https://app.masthead365.com",
+      postLogoutRedirectUri: "https://app.masthead365.com"
+    };
+  </script>
+  <iframe src="https://mastheadapi.azurewebsites.net" frameborder="0" height="0px" width="0px"></iframe>
+  <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js"></script>
+  <script src="./auth/auth.js"></script>
+
 </head>
 
 <body class="theme-light">

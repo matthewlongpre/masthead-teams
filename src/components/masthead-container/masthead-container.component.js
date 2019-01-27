@@ -17,14 +17,22 @@ import theme from "./../../styles/colors";
 
 export default class MastheadContainer extends Component {
   state = {
-    data: data.v,
+    data: null,
     flatMenu: new Map(),
     menuState: [],
     theme: theme["light"]
   }
 
   componentDidMount() {
-    this._processNav(data.v.menu);
+
+    const nav = this._getMastheadVersion();
+    nav.then(response => {
+      this.setState({
+        data: response.v
+      })
+      this._processNav(response.v.menu)})
+
+    // this._processNav(data.v.menu);
 
     // Call the initialize API first
     microsoftTeams.initialize();
@@ -55,6 +63,43 @@ export default class MastheadContainer extends Component {
       });
     }
   }
+
+  _getMastheadVersion() {
+    return this._mastheadRequest(window.savedToken, "GET", `https://sp.masthead365.com/api/getNav`)
+      .then(request => {
+        if (request.status === 200) {
+          let data;
+          try {
+            data = JSON.parse(request.response);
+          } catch (e) {
+            throw "FailedJSONParse";
+          }
+          return data;
+        } else {
+          return null;
+        }
+      });
+  }
+
+  _mastheadRequest = (token, method, url) => {
+    const request = new XMLHttpRequest();
+    request.open(method, url, true);
+    request.setRequestHeader("Authorization", `BEARER ${token}`);
+    request.setRequestHeader("accept", "application/json");
+    return new Promise((resolve, reject) => {
+      request.onreadystatechange = () => {
+        if (request.readyState === XMLHttpRequest.DONE) {
+          resolve(request);
+        }
+      };
+      request.send();
+    });
+  }
+
+
+
+
+
 
   _processNav(menu) {
     const flatMenu = new Map();
@@ -107,6 +152,8 @@ export default class MastheadContainer extends Component {
   }
 
   render() {
+    
+    if (this.state.data === null) return <div></div>;
     const { data: { menu }, menuState, theme } = this.state;
 
     return (
