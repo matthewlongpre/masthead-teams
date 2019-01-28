@@ -25,8 +25,6 @@ export default class MastheadList extends React.Component {
     }
   );
 
-  itemContainer = null;
-
   render() {
 
     const { depth, items, menuState, _changeMenuState } = this.props;
